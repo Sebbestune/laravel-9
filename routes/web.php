@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/add-post', [PostController::class, 'index']);
-Route::post('/store-post', [PostController::class, 'store']);
+Route::get('/posts', [PostController::class, 'readAll'])->name('readall.posts');
+
+Route::get('/posts/add', [PostController::class, 'index'])->name('add.post');
+Route::post('/posts/add/store', [PostController::class, 'store'])->name('store.post');

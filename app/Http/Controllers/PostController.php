@@ -18,6 +18,6 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->description = $request->description;
         $post->save();
-        return redirect('add-post')->with('status', 'New post added successfully!');
+        return redirect()->route('add.post')->with('status', 'New post added successfully!');
     }
 }
