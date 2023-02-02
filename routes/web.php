@@ -22,3 +22,5 @@ Route::get('/posts', [PostController::class, 'readAll'])->name('readall.posts');
 
 Route::get('/posts/add', [PostController::class, 'index'])->name('add.post');
 Route::post('/posts/add/store', [PostController::class, 'store'])->name('store.post');
+Route::get('/posts/update', [PostController::class, 'update'])->name('store.update');
+Route::get('/posts/delete/{myid}', [PostController::class, 'deletePost'])->name('store.delete');
